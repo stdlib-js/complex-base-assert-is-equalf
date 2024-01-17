@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import isEqualf from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-base-assert-is-equalf@deno/mod.js';
+import isEqualf from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-base-assert-is-equalf@v0.1.0-deno/mod.js';
 ```
 
 #### isEqualf( z1, z2 )
@@ -91,7 +91,7 @@ var out = isEqualf( z1, z2 );
 
 ```javascript
 import Complex64 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32@deno/mod.js';
-import isEqualf from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-base-assert-is-equalf@deno/mod.js';
+import isEqualf from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-base-assert-is-equalf@v0.1.0-deno/mod.js';
 
 var z1 = new Complex64( 5.0, 3.0 );
 var z2 = new Complex64( 5.0, 3.0 );
