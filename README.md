@@ -52,6 +52,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import isEqualf from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-base-assert-is-equalf@esm/index.mjs';
+```
+The previous example will load the latest bundled code from the esm branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/complex-base-assert-is-equalf/tags). For example,
+
+```javascript
 import isEqualf from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-base-assert-is-equalf@v0.1.0-esm/index.mjs';
 ```
 
@@ -96,7 +101,7 @@ var out = isEqualf( z1, z2 );
 <script type="module">
 
 import Complex64 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32@esm/index.mjs';
-import isEqualf from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-base-assert-is-equalf@v0.1.0-esm/index.mjs';
+import isEqualf from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-base-assert-is-equalf@esm/index.mjs';
 
 var z1 = new Complex64( 5.0, 3.0 );
 var z2 = new Complex64( 5.0, 3.0 );
