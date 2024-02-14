@@ -52,6 +52,11 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import isEqualf from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-base-assert-is-equalf@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/complex-base-assert-is-equalf/tags). For example,
+
+```javascript
 import isEqualf from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-base-assert-is-equalf@v0.2.0-deno/mod.js';
 ```
 
@@ -91,7 +96,7 @@ var out = isEqualf( z1, z2 );
 
 ```javascript
 import Complex64 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32@deno/mod.js';
-import isEqualf from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-base-assert-is-equalf@v0.2.0-deno/mod.js';
+import isEqualf from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-base-assert-is-equalf@deno/mod.js';
 
 var z1 = new Complex64( 5.0, 3.0 );
 var z2 = new Complex64( 5.0, 3.0 );
