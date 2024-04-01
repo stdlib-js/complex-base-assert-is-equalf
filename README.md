@@ -45,14 +45,32 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/complex-base-assert-is-equalf
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-import isEqualf from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-base-assert-is-equalf@deno/mod.js';
+var isEqualf = require( '@stdlib/complex-base-assert-is-equalf' );
 ```
 
 #### isEqualf( z1, z2 )
@@ -60,7 +78,7 @@ import isEqualf from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-base-assert-
 Tests whether two single-precision complex floating-point numbers are equal.
 
 ```javascript
-import Complex64 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32@deno/mod.js';
+var Complex64 = require( '@stdlib/complex-float32' );
 
 var z1 = new Complex64( 5.0, 3.0 );
 var z2 = new Complex64( 5.0, 3.0 );
@@ -90,8 +108,8 @@ var out = isEqualf( z1, z2 );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-import Complex64 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float32@deno/mod.js';
-import isEqualf from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-base-assert-is-equalf@deno/mod.js';
+var Complex64 = require( '@stdlib/complex-float32' );
+var isEqualf = require( '@stdlib/complex-base-assert-is-equalf' );
 
 var z1 = new Complex64( 5.0, 3.0 );
 var z2 = new Complex64( 5.0, 3.0 );
@@ -115,7 +133,101 @@ out = isEqualf( z1, z2 );
 
 <!-- C interface documentation. -->
 
+* * *
 
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/complex/base/assert/is_equalf.h"
+```
+
+#### stdlib_base_complex64_is_equal( z1, z2 )
+
+Tests whether single-precision complex floating-point numbers are equal.
+
+```c
+#include "stdlib/complex/float32.h"
+#include <stdbool.h>
+
+stdlib_complex64_t z1 = stdlib_complex64( 5.0, 2.0 );
+stdlib_complex64_t z2 = stdlib_complex64( 5.0, 2.0 );
+
+bool v = stdlib_base_complex64_is_equal( z1, z2 );
+```
+
+The function accepts the following arguments:
+
+-   **z1**: `[in] stdlib_complex64_t` first single-precision complex floating-point number.
+-   **z2**: `[in] stdlib_complex64_t` second single-precision complex floating-point number.
+
+```c
+bool stdlib_base_complex64_is_equal( const stdlib_complex64_t z1, const stdlib_complex64_t z2 );
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```c
+#include "stdlib/complex/base/assert/is_equalf.h"
+#include "stdlib/complex/float32.h"
+#include <stdbool.h>
+#include <stdio.h>
+
+int main( void ) {
+    const stdlib_complex64_t z[] = {
+        stdlib_complex64( 5.0f, 2.0f ),
+        stdlib_complex64( -2.0f, 1.0f ),
+        stdlib_complex64( 0.0f, -0.0f ),
+        stdlib_complex64( 0.0f/0.0f, 0.0f/0.0f )
+    };
+
+    bool v;
+    int i;
+    for ( i = 0; i < 4; i++ ) {
+        v = stdlib_base_complex64_is_equal( z[ i ], z[ i ] );
+        printf( "Equal? %s\n", ( v ) ? "True" : "False" );
+    }
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 <!-- Section to include cited references. If references are included, add a horizontal rule *before* the section. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
@@ -142,7 +254,7 @@ out = isEqualf( z1, z2 );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
